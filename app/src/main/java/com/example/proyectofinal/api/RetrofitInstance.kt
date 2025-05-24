@@ -13,8 +13,8 @@ import javax.net.ssl.X509TrustManager
 
 object RetrofitInstance {
 
-
-    private const val BASE_URL = "http:/192.168.0.55:8080/" // 10.0.2.2 192.168.76.87 192.168.0.55
+    val BASE_URL = ConfigReader.getProperty("BASE_URL")
+    //private const val BASE_URL = "http:/192.168.0.55:8080/" // 10.0.2.2 192.168.76.87 192.168.0.55
     fun getRetrofit(context: Context): Retrofit {
         val certificateFactory = CertificateFactory.getInstance("X.509")
         val inputStream: InputStream = context.resources.openRawResource(R.raw.tuapp) // tu certificado

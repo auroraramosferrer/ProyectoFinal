@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.Date
 
 object RetrofitClient {
-    private const val BASE_URL = "http://192.168.0.55:8080/" //10.0.2.2 - 192.168.76.87 192.168.0.55
+    private val BASE_URL = ConfigReader.getProperty("BASE_URL")
 
     private val retrofit by lazy {
 
