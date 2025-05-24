@@ -1,0 +1,5 @@
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+       android:drawable="@drawable/logout"
+       android:scaleWidth="70%"
+       android:scaleHeight="70%"
+       android:gravity="center"/>

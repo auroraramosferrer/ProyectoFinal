@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true" android:background="#FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutContenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+        <View
+                android:id="@+id/viewImagen"
+                android:layout_width="320dp"
+                android:layout_height="140dp"
+                android:background="@drawable/button_registrar_equipo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+        <TextView
+                android:text="IMAGEN DEL EQUIPO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textViewImagen"
+                app:layout_constraintTop_toTopOf="@+id/viewImagen"
+                app:layout_constraintBottom_toBottomOf="@+id/viewImagen"
+                app:layout_constraintVertical_bias="0.141"
+                android:fontFamily="@font/roboto_bold" android:textSize="20sp" android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/viewImagen"
+                app:layout_constraintEnd_toEndOf="@+id/viewImagen" app:layout_constraintHorizontal_bias="0.125"/>
+        <ImageButton
+                android:layout_width="90dp"
+                android:layout_height="90dp" app:srcCompat="@mipmap/ic_camera_foreground"
+                android:id="@+id/imageButtonCamara"
+                android:backgroundTint="#47CF73" app:layout_constraintEnd_toEndOf="@+id/viewImagen"
+                app:layout_constraintStart_toStartOf="@+id/viewImagen"
+                app:layout_constraintTop_toTopOf="@+id/viewImagen"
+                app:layout_constraintBottom_toBottomOf="@+id/viewImagen" app:layout_constraintHorizontal_bias="0.682"
+                app:layout_constraintVertical_bias="0.86"/>
+        <ImageButton
+                android:layout_width="90dp"
+                android:layout_height="90dp" app:srcCompat="@mipmap/ic_paperclip_foreground"
+                android:id="@+id/imageButtonAdjuntar"
+                android:backgroundTint="#47CF73"
+                app:layout_constraintTop_toTopOf="@+id/viewImagen"
+                app:layout_constraintStart_toStartOf="@+id/viewImagen"
+                app:layout_constraintBottom_toBottomOf="@+id/viewImagen"
+                app:layout_constraintEnd_toEndOf="@+id/viewImagen" app:layout_constraintHorizontal_bias="0.291"
+                app:layout_constraintVertical_bias="0.86"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

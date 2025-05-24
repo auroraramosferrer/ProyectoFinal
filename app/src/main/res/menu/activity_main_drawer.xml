@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/homeicon"
+                android:title="Menú principal"/>
+        <item
+                android:id="@+id/nav_registrar"
+                android:icon="@drawable/computer"
+                android:title="Registrar equipo"/>
+        <item
+                android:id="@+id/nav_lista_equipos_aulas"
+                android:icon="@drawable/list"
+                android:title="Lista de equipos"/>
+        <item
+                android:id="@+id/nav_escanear"
+                android:icon="@drawable/barcode"
+                android:title="Escanear código"/>
+        <item
+                android:id="@+id/nav_consultar_incidencias"
+                android:icon="@drawable/monitored"
+                android:title="Consultar incidencias"/>
+        <item
+                android:id="@+id/nav_crear_incidencias"
+                android:icon="@drawable/computerservice"
+                android:title="Crear incidencia"/>
+    </group>
+</menu>

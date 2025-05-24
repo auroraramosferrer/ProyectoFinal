@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/menu_option_1"
+            android:title="Fecha"
+            android:icon="@drawable/calendar"/>
+    <item
+            android:id="@+id/menu_option_2"
+            android:title="@string/prioridad"
+            android:icon="@drawable/priority"/>
+    <item
+            android:id="@+id/menu_option_3"
+            android:title="@string/aula"
+            android:icon="@drawable/classroom"/>
+</menu>

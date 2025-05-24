@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutContenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+        <View
+                android:id="@+id/viewSolucion"
+                android:layout_width="320dp"
+                android:layout_height="200dp"
+                android:background="@drawable/button_registrar_equipo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+
+        <TextView
+                android:id="@+id/textViewSolucion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SOLUCIÓN"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="@id/viewSolucion"
+                app:layout_constraintBottom_toBottomOf="@id/viewSolucion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_bias="0.078" app:layout_constraintStart_toStartOf="@+id/viewSolucion"
+                app:layout_constraintHorizontal_bias="0.063"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/solucionInputLayout"
+
+                android:layout_width="288dp"
+                android:layout_height="140dp"
+                app:layout_constraintStart_toStartOf="@id/viewSolucion"
+                app:layout_constraintEnd_toEndOf="@id/viewSolucion"
+                app:layout_constraintTop_toTopOf="@id/viewSolucion"
+                app:layout_constraintBottom_toBottomOf="@id/viewSolucion"
+                app:layout_constraintVertical_bias="0.802"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@android:color/black"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/solucion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine"
+                    android:maxLines="5"
+                    android:minLines="1"
+                    android:fontFamily="@font/roboto"
+                    android:scrollHorizontally="false"
+                    android:gravity="top|start"
+                    android:background="@android:color/white"
+                    android:textColor="@android:color/black"
+                    android:padding="12dp"
+                    android:hint=""
+                    android:layout_margin="0dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

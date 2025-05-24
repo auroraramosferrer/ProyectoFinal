@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+>
+
+    <!-- ScrollView con LinearLayout dentro para contener los CustomLayouts -->
+    <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+                android:id="@+id/linearLayoutContenido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="0dp">
+
+            <!-- Los custom layouts se agregan en el XML, ya no es necesario inflarlos en Kotlin -->
+            <include
+                    android:id="@+id/include_localizacion"
+                    layout="@layout/localizacion_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"/>
+            <include
+                    android:id="@+id/include_hardware"
+                    layout="@layout/hardware_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="0dp"/>
+            <include
+                    android:id="@+id/include_software"
+                    layout="@layout/software_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            <include
+                    android:id="@+id/include_imagen"
+                    layout="@layout/imagen_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Primer FloatingActionButton en la esquina inferior izquierda -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButtonLeft"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/cancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:tint="@android:color/white"
+            app:tint="@null"
+            android:backgroundTint="@color/rojocancelar"/>
+
+    <!-- Segundo FloatingActionButton en la esquina inferior derecha -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButtonRight"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/check"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:tint="@android:color/white"
+            app:tint="@null"
+            android:backgroundTint="@color/verdeaceptar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

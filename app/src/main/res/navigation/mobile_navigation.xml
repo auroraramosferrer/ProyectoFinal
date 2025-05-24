@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mobile_navigation"
+            app:startDestination="@+id/nav_home">
+
+    <fragment
+            android:id="@+id/nav_home"
+            android:name="com.example.proyectofinal.ui.home.HomeFragment"
+            android:label="@string/menu_home"
+            tools:layout="@layout/fragment_home">
+        <action
+                android:id="@+id/action_home_to_registro"
+                app:destination="@id/nav_registrar"/>
+        <action
+                android:id="@+id/action_home_to_escaneo"
+                app:destination="@id/nav_escanear"/>
+        <action
+                android:id="@+id/action_home_to_consultar_incidencias"
+                app:destination="@id/nav_consultar_incidencias"/>
+        <action
+                android:id="@+id/action_home_to_lista_equipos_aulas"
+                app:destination="@id/nav_lista_equipos_aulas"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/nav_lista_equipos_equipo"
+            android:name="com.example.proyectofinal.ui.listaEquiposEquipo.ListaEquiposEquipoFragment"
+            android:label="Lista de equipos"
+            tools:layout="@layout/fragment_lista_equipos_equipo">
+        <argument
+                android:name="aulaId"
+                app:argType="long"/>
+        <argument
+                android:name="id"
+                app:argType="long"/>
+        <action
+                android:id="@+id/action_listaEquiposEquipoFragment_to_informacionFragment"
+                app:destination="@id/nav_informacion_equipo"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/nav_lista_equipos_aulas"
+            android:name="com.example.proyectofinal.ui.listaEquiposAulas.ListaEquiposAulasFragment"
+            android:label="Lista de aulas"
+            tools:layout="@layout/fragment_lista_equipos_aulas">
+        <action
+                android:id="@+id/action_listaEquiposAulasFragment_to_equiposFragment"
+                app:destination="@id/nav_lista_equipos_equipo">
+            <argument
+                    android:name="id"
+                    app:argType="long"/>
+        </action>
+    </fragment>
+
+    <fragment
+            android:id="@+id/nav_gallery"
+            android:name="com.example.proyectofinal.ui.gallery.GalleryFragment"
+            android:label="@string/menu_gallery"
+            tools:layout="@layout/fragment_gallery"/>
+
+    <fragment
+            android:id="@+id/nav_slideshow"
+            android:name="com.example.proyectofinal.ui.slideshow.SlideshowFragment"
+            android:label="@string/menu_slideshow"
+            tools:layout="@layout/fragment_slideshow"/>
+
+    <fragment
+            android:id="@+id/nav_registrar"
+            android:name="com.example.proyectofinal.ui.registrarEquipo.RegistrarFragment"
+            android:label="Registrar equipo"
+            tools:layout="@layout/fragment_registrar">
+        <action
+                android:id="@+id/action_registrar_to_home"
+                app:destination="@id/nav_home"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/nav_escanear"
+            android:name="com.example.proyectofinal.ui.escaneo.EscanearFragment"
+            android:label="Escanear equipo"
+            tools:layout="@layout/fragment_escanear">
+
+        <action
+                android:id="@+id/action_escaneo_to_informacion"
+                app:destination="@id/nav_informacion_equipo">
+            <argument
+                    android:name="id"
+                    app:argType="long"/>
+
+        </action>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/nav_consultar_incidencias"
+            android:name="com.example.proyectofinal.ui.consultarIncidencias.ConsultarIncidenciasFragment"
+            android:label="Incidencias"
+            tools:layout="@layout/fragment_consultar_incidencias">
+        <action
+                android:id="@+id/action_incidencias_to_detalles"
+                app:destination="@id/nav_detalles_incidencia">
+            <argument
+                    android:name="id"
+                    app:argType="long"/>
+        </action>
+    </fragment>
+
+    <fragment
+            android:id="@+id/nav_editar_incidencia"
+            android:name="com.example.proyectofinal.ui.editarIncidencias.EditarIncidenciaFragment"
+            android:label="Editar incidencia"
+            tools:layout="@layout/fragment_editar_incidencia"/>
+
+    <fragment
+            android:id="@+id/nav_editar_equipo"
+            android:name="com.example.proyectofinal.ui.editarEquipos.EditarEquipoFragment"
+            android:label="Editar equipo"
+            tools:layout="@layout/fragment_editar_equipo">
+
+    <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+
+
+    <fragment
+            android:id="@+id/nav_informacion_equipo"
+            android:name="com.example.proyectofinal.ui.informacionEquipo.InformacionFragment"
+            android:label="Información equipo"
+            tools:layout="@layout/fragment_informacion">
+        <argument
+                android:name="id"
+                app:argType="long"/>
+        <argument
+                android:name="idaula"
+                app:argType="long"/>
+        <action
+                android:id="@+id/action_informacion_to_crear_incidencia"
+                app:destination="@id/nav_crear_incidencia"/>
+        <action
+                android:id="@+id/action_informacion_to_editar_equipo"
+                app:destination="@id/nav_editar_equipo"/>
+        <action
+                android:id="@+id/action_informacion_to_consultar_incidencia"
+                app:destination="@id/nav_consultar_incidencias"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/nav_detalles_incidencia"
+            android:name="com.example.proyectofinal.ui.detallesIncidencias.DetallesIncidenciasFragment"
+            android:label="Información incidencia"
+            tools:layout="@layout/fragment_detalles_incidencias">
+        <argument
+                android:name="idIncidencia"
+                app:argType="long"/>
+        <argument
+                android:name="desdeResueltas"
+                app:argType="boolean"
+                android:defaultValue="false" />
+        <action
+                android:id="@+id/action_detalles_to_editar_incidencia"
+                app:destination="@id/nav_editar_incidencia"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/nav_crear_incidencia"
+            android:name="com.example.proyectofinal.ui.crearIncidencias.CrearIncidenciasFragment"
+            android:label="Nueva incidencia"
+            tools:layout="@layout/fragment_crear_incidencias">
+        <argument
+                android:name="idIncidencia"
+                app:argType="integer"
+                android:defaultValue="-1" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/nav_incidencias_activas"
+            android:name="com.example.proyectofinal.ui.consultarIncidencias.activas.IncidenciasActivasFragment"
+            android:label="Incidencias Activas"
+            tools:layout="@layout/fragment_incidencias_activas">
+        <action
+                android:id="@+id/action_incidenciasActivas_to_detallesIncidencias"
+                app:destination="@id/nav_detalles_incidencia">
+            <argument
+                    android:name="id"
+                    app:argType="long"/>
+        </action>
+    </fragment>
+
+    <fragment
+            android:id="@+id/nav_incidencias_resueltas"
+            android:name="com.example.proyectofinal.ui.consultarIncidencias.resueltas.IncidenciasResueltasFragment"
+            android:label="Incidencias Resueltas"
+            tools:layout="@layout/fragment_incidencias_resueltas">
+        <action
+                android:id="@+id/action_incidenciasResueltas_to_detallesIncidencias"
+                app:destination="@id/nav_detalles_incidencia">
+            <argument
+                    android:name="id"
+                    app:argType="long"/>
+        </action>
+    </fragment>
+
+    <fragment
+            android:id="@+id/nav_incidencias_creadas"
+            android:name="com.example.proyectofinal.ui.consultarIncidencias.creadas.IncidenciasCreadasFragment"
+            android:label="Incidencias Creadas"
+            tools:layout="@layout/fragment_incidencias_creadas">
+        <action
+                android:id="@+id/action_incidenciasCreadas_to_detallesIncidencias"
+                app:destination="@id/nav_detalles_incidencia">
+            <argument
+                    android:name="id"
+                    app:argType="long"/>
+        </action>
+    </fragment>
+
+</navigation>

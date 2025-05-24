@@ -1,0 +1,293 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:id="@+id/fragment_container">
+
+    <!-- Contenedor principal del ScrollView con su contenido -->
+    <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutContenido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+            <View
+                    android:id="@+id/viewDetallesIncidencia"
+                    android:layout_width="325dp"
+                    android:layout_height="690dp"
+                    android:background="@drawable/containter_localizacion"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+            />
+
+            <TextView
+                    android:id="@+id/textViewAula"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="26sp"
+                    android:textColor="@color/black"
+                    android:gravity="start"
+                    android:textAlignment="textEnd"
+                    app:layout_constraintTop_toTopOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintBottom_toBottomOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_bias="0.029"
+                    app:layout_constraintHorizontal_bias="0.849"/>
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    app:layout_constraintStart_toStartOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintEnd_toEndOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintHorizontal_bias="0.07"
+                    app:layout_constraintTop_toTopOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintVertical_bias="0.029" android:id="@+id/textViewEquipo"/>
+            <TextView
+                    android:id="@+id/textViewAutor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AUTOR INCIDENCIA"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    app:layout_constraintStart_toStartOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintEnd_toEndOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintHorizontal_bias="0.092"
+                    app:layout_constraintTop_toTopOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintVertical_bias="0.12"/>
+            <TextView
+                    android:id="@+id/textViewDescripcionDetalles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DESCRIPCIÓN"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    app:layout_constraintStart_toStartOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintEnd_toEndOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintHorizontal_bias="0.068"
+                    app:layout_constraintTop_toTopOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintVertical_bias="0.435"/>
+            <TextView
+                    android:id="@+id/textViewSolucionDetalles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SOLUCIÓN"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    app:layout_constraintStart_toStartOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintEnd_toEndOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintHorizontal_bias="0.058"
+                    app:layout_constraintTop_toTopOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintVertical_bias="0.736"/>
+            <TextView
+                    android:id="@+id/textViewEstado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ESTADO"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    app:layout_constraintStart_toStartOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintEnd_toEndOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintHorizontal_bias="0.081"
+                    app:layout_constraintTop_toTopOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintVertical_bias="0.29"/>
+            <TextView
+                    android:id="@+id/textViewEstado2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRIORIDAD"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    app:layout_constraintStart_toStartOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintEnd_toEndOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintTop_toTopOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintVertical_bias="0.29"/>
+            <TextView
+                    android:id="@+id/textViewClase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CLASE"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    app:layout_constraintStart_toStartOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintEnd_toEndOf="@id/viewDetallesIncidencia"
+                    app:layout_constraintHorizontal_bias="0.895"
+                    app:layout_constraintTop_toTopOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintVertical_bias="0.29"/>
+            <View
+                    android:id="@+id/viewContenedorAutor"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/container_blanco"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="8dp" app:layout_constraintBottom_toBottomOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintVertical_bias="0.184"/>
+            <View
+                    android:id="@+id/viewContenedorAutor5"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/container_blanco"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="8dp" app:layout_constraintBottom_toBottomOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintVertical_bias="0.598"/>
+            <View
+                    android:id="@+id/viewContenedorAutor6"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/container_blanco"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="8dp" app:layout_constraintBottom_toBottomOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintVertical_bias="0.966"/>
+            <View
+                    android:id="@+id/viewContenedorEstado"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/container_blanco"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintStart_toStartOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintTop_toTopOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintVertical_bias="0.355"
+                    app:layout_constraintEnd_toEndOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintHorizontal_bias="0.056"/>
+            <View
+                    android:id="@+id/viewContenedorPrioridad"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/container_blanco"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintStart_toStartOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintTop_toTopOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintVertical_bias="0.355"
+                    app:layout_constraintEnd_toEndOf="@+id/viewDetallesIncidencia"/>
+            <View
+                    android:id="@+id/viewContenedorClase"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/container_blanco"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintStart_toStartOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintEnd_toEndOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintTop_toTopOf="@+id/viewDetallesIncidencia"
+                    app:layout_constraintHorizontal_bias="0.947" app:layout_constraintVertical_bias="0.355"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textViewNombreAutor"
+                    app:layout_constraintTop_toTopOf="@+id/viewContenedorAutor"
+                    app:layout_constraintStart_toStartOf="@+id/viewContenedorAutor"
+                    app:layout_constraintEnd_toEndOf="@+id/viewContenedorAutor"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewContenedorAutor"
+                    android:fontFamily="@font/roboto_bold" android:textColor="#050505" android:textSize="16sp"/>
+            <TextView
+                    android:text="En proceso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textViewTextoEstado"
+                    app:layout_constraintTop_toTopOf="@+id/viewContenedorEstado"
+                    app:layout_constraintStart_toStartOf="@+id/viewContenedorEstado"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewContenedorEstado"
+                    app:layout_constraintEnd_toEndOf="@+id/viewContenedorEstado" android:fontFamily="@font/roboto_bold"
+                    android:textColor="#FFFFFF"/>
+            <TextView
+                    android:text="Alta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textViewTextoPrioridad"
+                    app:layout_constraintTop_toTopOf="@+id/viewContenedorPrioridad"
+                    app:layout_constraintStart_toStartOf="@+id/viewContenedorPrioridad"
+                    app:layout_constraintEnd_toEndOf="@+id/viewContenedorPrioridad"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewContenedorPrioridad"
+                    android:fontFamily="@font/roboto_bold" android:textColor="#FFFFFF"/>
+            <TextView
+                    android:text="Software"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textViewTextoClase"
+                    app:layout_constraintTop_toTopOf="@+id/viewContenedorClase"
+                    app:layout_constraintStart_toStartOf="@+id/viewContenedorClase"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewContenedorClase"
+                    app:layout_constraintEnd_toEndOf="@+id/viewContenedorClase" android:textColor="#FFFFFF"
+                    android:fontFamily="@font/roboto_bold"/>
+            <TextView
+                    android:layout_width="270dp"
+                    android:layout_height="120dp" android:id="@+id/textViewTextoDescripcion"
+                    app:layout_constraintTop_toTopOf="@+id/viewContenedorAutor5"
+                    app:layout_constraintStart_toStartOf="@+id/viewContenedorAutor5"
+                    app:layout_constraintEnd_toEndOf="@+id/viewContenedorAutor5"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewContenedorAutor5" android:textColor="#050505"
+                    android:fontFamily="@font/roboto_bold"/>
+            <TextView
+                    android:layout_width="270dp"
+                    android:layout_height="120dp" android:id="@+id/textViewTextoSolucion"
+                    app:layout_constraintTop_toTopOf="@+id/viewContenedorAutor6"
+                    app:layout_constraintStart_toStartOf="@+id/viewContenedorAutor6"
+                    app:layout_constraintEnd_toEndOf="@+id/viewContenedorAutor6"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewContenedorAutor6" android:textColor="#050505"
+                    android:fontFamily="@font/roboto_bold"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- Los botones flotantes fuera del ScrollView -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabEliminarIncidencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bin"
+            android:clickable="true"
+            app:tint="@android:color/white"
+            android:backgroundTint="@color/rojocancelar"
+            android:layout_margin="16dp"
+            android:layout_gravity="bottom|start"
+
+    />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabEditarIncidencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pencil"
+            app:maxImageSize="20dp"
+            android:clickable="true"
+            app:tint="@android:color/white"
+            android:backgroundTint="@color/naranja"
+            android:layout_margin="16dp"
+            android:layout_gravity="bottom|right"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabCompletarIncidencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/check"
+            android:clickable="true"
+            app:tint="@android:color/white"
+            android:backgroundTint="@color/verdeaceptar"
+            android:layout_margin="16dp"
+            android:layout_gravity="bottom|center"/>
+
+</FrameLayout>

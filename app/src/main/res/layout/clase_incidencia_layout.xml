@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutContenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+        <View
+                android:id="@+id/viewSoftware"
+                android:layout_width="320dp"
+                android:layout_height="120dp"
+                android:background="@drawable/button_escanear"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+
+        <TextView
+                android:id="@+id/textViewSoftware"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CLASE"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="@id/viewSoftware"
+                app:layout_constraintBottom_toBottomOf="@id/viewSoftware"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_bias="0.139" app:layout_constraintStart_toStartOf="@+id/viewSoftware"
+                app:layout_constraintHorizontal_bias="0.052"/>
+        <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleGroupClase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:selectionRequired="true"
+                app:singleSelection="true"
+                app:layout_constraintTop_toTopOf="@+id/viewSoftware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewSoftware"
+                app:layout_constraintEnd_toEndOf="@+id/viewSoftware"
+                app:layout_constraintStart_toStartOf="@+id/viewSoftware" app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintVertical_bias="0.666">
+
+            <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Software"
+                    android:textColor="@drawable/toggle_button_text_color"
+                    app:strokeColor="@drawable/toggle_button_stroke_color"
+                    android:textAllCaps="false" android:textSize="16sp" app:backgroundTint="@color/lila"
+                    android:id="@+id/btnSoftware" android:fontFamily="@font/roboto_bold"/>
+
+            <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hardware"
+                    android:textColor="@drawable/toggle_button_text_color"
+                    app:strokeColor="@drawable/toggle_button_stroke_color"
+                    android:textAllCaps="false" android:textSize="16sp" app:backgroundTint="@color/rojoclasehardware"
+                    android:fontFamily="@font/roboto_bold" android:id="@+id/btnHardware"/>
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

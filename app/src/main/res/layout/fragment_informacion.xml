@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".ui.informacionEquipo.InformacionFragment">
+
+    <!-- ConstraintLayout único para todos los elementos -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <!-- Elementos dentro del ConstraintLayout para hacer scroll -->
+
+        <View
+                android:id="@+id/viewContenedorLocalizacion"
+                android:layout_width="160dp"
+                android:layout_height="85dp"
+                android:background="@drawable/containter_localizacion"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.013"
+                app:layout_constraintStart_toEndOf="@+id/viewContenedorImagen"
+                app:layout_constraintHorizontal_bias="0.178"/>
+        <View
+                android:id="@+id/viewContenedorSoftware"
+                android:layout_width="160dp"
+                android:layout_height="70dp"
+                android:background="@drawable/button_lista_equipos"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/viewContenedorImagen"
+                app:layout_constraintTop_toBottomOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintHorizontal_bias="0.162" app:layout_constraintVertical_bias="0.009"/>
+        <View
+                android:id="@+id/viewContenedorHardware"
+                android:layout_width="340dp"
+                android:layout_height="235dp"
+                android:background="@drawable/button_escanear"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.535"
+                app:layout_constraintTop_toBottomOf="@+id/viewContenedorImagen"
+                app:layout_constraintVertical_bias="0.028"/>
+        <TextView
+                android:text="Aula:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewDetalleAulas"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintHorizontal_bias="0.125"
+                app:layout_constraintVertical_bias="0.241"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+        <TextView
+                android:text="123"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textViewTextoAula"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintHorizontal_bias="0.55" app:layout_constraintVertical_bias="0.241"
+                android:fontFamily="@font/roboto" android:textColor="@color/black" android:textSize="20sp"/>
+        <!-- Repite el mismo patrón para los demás TextViews y Views -->
+
+        <!-- Botones flotantes fuera del ConstraintLayout -->
+        <TextView
+                android:layout_width="140dp"
+                android:layout_height="23dp" android:id="@+id/textViewTextoMarca"
+                android:fontFamily="@font/roboto" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.35" app:layout_constraintVertical_bias="0.226"/>
+        <TextView
+                android:layout_width="55dp"
+                android:layout_height="24dp" android:id="@+id/textViewTextoRam"
+                android:fontFamily="@font/roboto" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.957" app:layout_constraintVertical_bias="0.915"/>
+        <TextView
+                android:layout_width="35dp"
+                android:layout_height="24dp" android:id="@+id/textViewTextoBluetooth"
+                android:fontFamily="@font/roboto" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.993" app:layout_constraintVertical_bias="0.227"/>
+        <TextView
+                android:layout_width="55dp"
+                android:layout_height="24dp" android:id="@+id/textViewTextoWifi"
+                android:fontFamily="@font/roboto" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.912" app:layout_constraintVertical_bias="0.393"/>
+        <TextView
+                android:layout_width="35dp"
+                android:layout_height="24dp" android:id="@+id/textViewTextoNDiscos"
+                android:fontFamily="@font/roboto" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.993" app:layout_constraintVertical_bias="0.734"/>
+        <TextView
+                android:layout_width="130dp"
+                android:layout_height="23dp" android:id="@+id/textViewTextoModelo"
+                android:fontFamily="@font/roboto" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.37" app:layout_constraintVertical_bias="0.396"/>
+        <TextView
+                android:layout_width="127dp"
+                android:layout_height="24dp" android:id="@+id/textViewTextoGrafica"
+                android:fontFamily="@font/roboto" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.361" app:layout_constraintVertical_bias="0.568"/>
+        <TextView
+                android:layout_width="55dp"
+                android:layout_height="24dp" android:id="@+id/textViewTextoTipoDiscos"
+                android:fontFamily="@font/roboto" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.989" app:layout_constraintVertical_bias="0.568"/>
+        <TextView
+                android:layout_width="145dp"
+                android:layout_height="24dp" android:id="@+id/textViewTextoCPU"
+                android:fontFamily="@font/roboto" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.29" app:layout_constraintVertical_bias="0.734"/>
+        <TextView
+                android:layout_width="142dp"
+                android:layout_height="wrap_content" android:id="@+id/textViewTextoProcesador"
+                android:fontFamily="@font/roboto" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.328" app:layout_constraintVertical_bias="0.915"/>
+        <TextView
+                android:text="1234"
+                android:layout_width="60dp"
+                android:layout_height="27dp" android:id="@+id/textViewTextoCodigo"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintHorizontal_bias="0.86" app:layout_constraintVertical_bias="0.793"
+                android:fontFamily="@font/roboto" android:textColor="@color/black" android:textSize="20sp"/>
+        <TextView
+                android:text="Código:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textViewDetalleCodigo"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorLocalizacion"
+                app:layout_constraintHorizontal_bias="0.136" app:layout_constraintVertical_bias="0.793"
+                android:fontFamily="@font/roboto_bold" android:textColor="@color/black" android:textSize="20sp"/>
+        <TextView
+                android:text="Sistema operativo"
+                android:layout_width="146dp"
+                android:layout_height="25dp" android:id="@+id/textViewDetalleSO"
+                android:fontFamily="@font/roboto_bold" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorSoftware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorSoftware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorSoftware"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorSoftware"
+                app:layout_constraintHorizontal_bias="0.578"
+                app:layout_constraintVertical_bias="0.24"/>
+        <TextView
+                android:text="HARDWARE"
+                android:layout_width="139dp"
+                android:layout_height="28dp" android:id="@+id/textViewDetalleHardware"
+                android:fontFamily="@font/roboto_bold" android:textColor="@color/black" android:textSize="24sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.06" app:layout_constraintVertical_bias="0.05"/>
+        <TextView
+                android:text="Marca:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textViewDetalleMarca"
+                android:fontFamily="@font/roboto_bold" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.052" app:layout_constraintVertical_bias="0.226"/>
+        <TextView
+                android:text="Modelo:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textViewDetalleModelo"
+                android:fontFamily="@font/roboto_bold" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.053" app:layout_constraintVertical_bias="0.4"/>
+        <TextView
+                android:text="Proc. :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textViewDetalleProcesador"
+                android:fontFamily="@font/roboto_bold" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.05" app:layout_constraintVertical_bias="0.915"/>
+        <TextView
+                android:text="RAM:"
+                android:layout_width="50dp"
+                android:layout_height="24dp" android:id="@+id/textViewDetalleRam"
+                android:fontFamily="@font/roboto_bold" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.768" app:layout_constraintVertical_bias="0.915"/>
+        <TextView
+                android:text="CPU:"
+                android:layout_width="45dp"
+                android:layout_height="24dp" android:id="@+id/textViewDetalleCpu"
+                android:fontFamily="@font/roboto_bold" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.05" app:layout_constraintVertical_bias="0.739"/>
+        <TextView
+                android:text="Gráfica:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textViewDetalleGrafica"
+                android:fontFamily="@font/roboto_bold" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.053" app:layout_constraintVertical_bias="0.566"/>
+        <TextView
+                android:text="Discos:"
+                android:layout_width="60dp"
+                android:layout_height="24dp" android:id="@+id/textViewDetalleTipoDiscos"
+                android:fontFamily="@font/roboto_bold" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.796" app:layout_constraintVertical_bias="0.568"/>
+        <TextView
+                android:text="Nºdiscos:"
+                android:layout_width="80dp"
+                android:layout_height="24dp" android:id="@+id/textViewDetalleNDiscos"
+                android:fontFamily="@font/roboto_bold" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.857" app:layout_constraintVertical_bias="0.739"/>
+        <TextView
+                android:text="Bluetooth:"
+                android:layout_width="80dp"
+                android:layout_height="24dp" android:id="@+id/textViewDetalleBluetooth"
+                android:fontFamily="@font/roboto_bold" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.855" app:layout_constraintVertical_bias="0.227"/>
+        <TextView
+                android:text="Wifi:"
+                android:layout_width="37dp"
+                android:layout_height="24dp" android:id="@+id/textViewDetalleWifi"
+                android:fontFamily="@font/roboto_bold" android:textColor="@color/black" android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.735" app:layout_constraintVertical_bias="0.393"/>
+        <TextView
+                android:text=""
+                android:layout_width="146dp"
+                android:layout_height="28dp" android:id="@+id/textViewTextoSO"
+                android:fontFamily="@font/roboto" android:textColor="@color/black" android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorSoftware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorSoftware"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorSoftware"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorSoftware"
+                app:layout_constraintVertical_bias="0.785" app:layout_constraintHorizontal_bias="0.571"/>
+        <View
+                android:id="@+id/viewContenedorIncidencias"
+                android:layout_width="340dp"
+                android:layout_height="120dp"
+                android:background="@drawable/button_crear_incidencia"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.563"
+                app:layout_constraintTop_toBottomOf="@+id/viewContenedorHardware"
+                app:layout_constraintVertical_bias="0.03"
+                android:visibility="gone"/>
+        <TextView
+                android:text="ESTE EQUIPO TIENE INCIDENCIAS ACTIVAS"
+                android:layout_width="333dp"
+                android:layout_height="45dp" android:id="@+id/textViewIncidenciasActivas"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorIncidencias"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorIncidencias"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorIncidencias"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorIncidencias"
+                android:fontFamily="@font/roboto_bold" android:textColor="#040404"
+                app:layout_constraintVertical_bias="0.133" android:textSize="20sp"
+                app:layout_constraintHorizontal_bias="0.0" android:textAlignment="center"
+                android:visibility="gone"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabEliminarEquipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bin"
+                android:clickable="true"
+                app:tint="@android:color/white"
+                android:backgroundTint="@color/rojocancelar"
+                android:layout_margin="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" android:layout_gravity="bottom|left"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabIncidencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/troubleshooting"
+                app:maxImageSize="40dp"
+                android:clickable="true"
+                app:tint="@android:color/white"
+                android:backgroundTint="@color/naranja"
+                android:layout_margin="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_gravity="bottom|center" app:layout_constraintHorizontal_bias="0.245"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabEditarEquipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pencil"
+                android:clickable="true"
+                app:tint="@android:color/white"
+                android:backgroundTint="@color/verdeaceptar"
+                android:layout_margin="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="1.0" android:layout_gravity="bottom|right"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabImprimirQr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/printer"
+                android:clickable="true"
+                app:tint="@android:color/white"
+                android:backgroundTint="@color/azulestadocreado"
+                android:layout_margin="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.746" android:layout_gravity="bottom|right"/>
+        <View
+                android:id="@+id/viewContenedorImagen"
+                android:layout_width="170dp"
+                android:layout_height="160dp"
+                android:background="@drawable/button_registrar_equipo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.016"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorHardware"
+                app:layout_constraintHorizontal_bias="0.0"/>
+        <ImageView
+                android:src="@drawable/computer"
+                android:layout_width="155dp"
+                android:layout_height="155dp" android:id="@+id/imageViewOrdenador"
+                app:layout_constraintTop_toTopOf="@+id/viewContenedorImagen"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorImagen"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorImagen"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorImagen"
+                app:layout_constraintHorizontal_bias="0.56" app:layout_constraintVertical_bias="0.50"
+                android:foregroundGravity="center"/>
+        <Button
+                android:text="VER INCIDENCIAS"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/buttonIncidencias"
+                app:layout_constraintBottom_toBottomOf="@+id/viewContenedorIncidencias"
+                app:layout_constraintTop_toBottomOf="@+id/textViewIncidenciasActivas"
+                app:layout_constraintStart_toStartOf="@+id/viewContenedorIncidencias"
+                app:layout_constraintEnd_toEndOf="@+id/viewContenedorIncidencias" android:textColorLink="#A61111"
+                android:fontFamily="@font/roboto_bold" android:backgroundTint="#FFFFFF" android:textColor="#040404"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

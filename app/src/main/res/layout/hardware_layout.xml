@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutContenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+        <View
+                android:id="@+id/viewHardware"
+                android:layout_width="320dp"
+                android:layout_height="785dp"
+                android:background="@drawable/button_escanear"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+
+        <TextView
+                android:id="@+id/textViewHardware"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HARDWARE"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="@+id/viewHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewHardware" app:layout_constraintHorizontal_bias="0.077"
+                app:layout_constraintVertical_bias="0.022"/>
+        <TextView
+                android:id="@+id/textViewMarca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marca"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintTop_toBottomOf="@+id/textViewHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewHardware"
+                app:layout_constraintBottom_toTopOf="@+id/marcaInputLayout" app:layout_constraintHorizontal_bias="0.08"
+                app:layout_constraintVertical_bias="1.0"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/marcaInputLayout"
+
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@id/viewHardware"
+                app:layout_constraintTop_toTopOf="@id/viewHardware"
+                app:layout_constraintBottom_toBottomOf="@id/viewHardware"
+                app:layout_constraintVertical_bias="0.113"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@android:color/black"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:hintEnabled="false" app:layout_constraintHorizontal_bias="0.488">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/marca"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:background="@android:color/white"
+                    android:textColor="@android:color/black"
+                    android:padding="12dp"
+                    android:hint=""
+                    android:fontFamily="@font/roboto"
+                    android:layout_margin="0dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+                android:id="@+id/textViewModelo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modelo"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintTop_toBottomOf="@+id/marcaInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewHardware" app:layout_constraintHorizontal_bias="0.083"
+                app:layout_constraintBottom_toBottomOf="@+id/viewHardware" app:layout_constraintVertical_bias="0.015"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/modeloInputLayout"
+
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@android:color/black"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:hintEnabled="false"
+                app:layout_constraintStart_toStartOf="@+id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewHardware"
+                app:layout_constraintTop_toTopOf="@+id/viewHardware" app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintBottom_toBottomOf="@+id/viewHardware" app:layout_constraintVertical_bias="0.225">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/modelo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:fontFamily="@font/roboto"
+                    android:background="@android:color/white"
+                    android:textColor="@android:color/black"
+                    android:padding="12dp"
+                    android:hint=""
+                    android:layout_margin="0dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+                android:id="@+id/textViewProcesador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Procesador"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintStart_toStartOf="@id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@id/viewHardware"
+                app:layout_constraintHorizontal_bias="0.094"
+                app:layout_constraintTop_toTopOf="@+id/viewHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewHardware" app:layout_constraintVertical_bias="0.298"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/procesadorInputLayout"
+
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@id/viewHardware"
+                app:layout_constraintTop_toTopOf="@id/viewHardware"
+                app:layout_constraintBottom_toBottomOf="@id/viewHardware"
+                app:layout_constraintVertical_bias="0.342"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@android:color/black"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:hintEnabled="false" app:layout_constraintHorizontal_bias="0.488">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/procesador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:fontFamily="@font/roboto"
+                    android:background="@android:color/white"
+                    android:textColor="@android:color/black"
+                    android:padding="12dp"
+                    android:hint=""
+                    android:layout_margin="0dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+                android:id="@+id/textViewTarjeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tarjeta gráfica"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintStart_toStartOf="@id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@id/viewHardware"
+                app:layout_constraintHorizontal_bias="0.104"
+                app:layout_constraintTop_toTopOf="@+id/viewHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewHardware" app:layout_constraintVertical_bias="0.864"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tarjetaInputLayout"
+
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@id/viewHardware"
+                app:layout_constraintTop_toTopOf="@id/viewHardware"
+                app:layout_constraintBottom_toBottomOf="@id/viewHardware"
+                app:layout_constraintVertical_bias="0.922"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@android:color/black"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:hintEnabled="false" app:layout_constraintHorizontal_bias="0.488">>
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tarjeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:fontFamily="@font/roboto"
+                    android:background="@android:color/white"
+                    android:textColor="@android:color/black"
+                    android:padding="12dp"
+                    android:hint=""
+                    android:layout_margin="0dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+                android:id="@+id/textViewRam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RAM"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintStart_toStartOf="@id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@id/viewHardware"
+                app:layout_constraintHorizontal_bias="0.077"
+                app:layout_constraintTop_toTopOf="@+id/viewHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewHardware" app:layout_constraintVertical_bias="0.41"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ramInputLayout"
+
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@id/viewHardware"
+                app:layout_constraintTop_toTopOf="@id/viewHardware"
+                app:layout_constraintBottom_toBottomOf="@id/viewHardware"
+                app:layout_constraintVertical_bias="0.462"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@android:color/black"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:hintEnabled="false" app:layout_constraintHorizontal_bias="0.488">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ram"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:fontFamily="@font/roboto"
+                    android:background="@android:color/white"
+                    android:textColor="@android:color/black"
+                    android:padding="12dp"
+                    android:hint=""
+                    android:layout_margin="0dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+                android:id="@+id/textViewCpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CPU"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintTop_toTopOf="@+id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewHardware" app:layout_constraintHorizontal_bias="0.076"
+                app:layout_constraintVertical_bias="0.526"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cpuInputLayout"
+
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@id/viewHardware"
+                app:layout_constraintTop_toTopOf="@id/viewHardware"
+                app:layout_constraintBottom_toBottomOf="@id/viewHardware"
+                app:layout_constraintVertical_bias="0.576"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@android:color/black"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:hintEnabled="false" app:layout_constraintHorizontal_bias="0.488">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cpu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:fontFamily="@font/roboto"
+                    android:background="@android:color/white"
+                    android:textColor="@android:color/black"
+                    android:padding="12dp"
+                    android:hint=""
+                    android:layout_margin="0dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+                android:id="@+id/textViewNdiscos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Número de discos"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintTop_toTopOf="@+id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewHardware" app:layout_constraintHorizontal_bias="0.121"
+                app:layout_constraintVertical_bias="0.746"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ndiscosInputLayout"
+
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@id/viewHardware"
+                app:layout_constraintTop_toTopOf="@id/viewHardware"
+                app:layout_constraintBottom_toBottomOf="@id/viewHardware"
+                app:layout_constraintVertical_bias="0.802"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@android:color/black"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:hintEnabled="false" app:layout_constraintHorizontal_bias="0.488">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ndiscos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:fontFamily="@font/roboto"
+                    android:background="@android:color/white"
+                    android:textColor="@android:color/black"
+                    android:padding="12dp"
+                    android:hint=""
+                    android:layout_margin="0dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+                android:id="@+id/textViewTipoDiscos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo de discos"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintTop_toTopOf="@+id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewHardware"
+                app:layout_constraintBottom_toBottomOf="@+id/viewHardware" app:layout_constraintHorizontal_bias="0.105"
+                app:layout_constraintVertical_bias="0.635"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tipodiscosInputLayout"
+
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@id/viewHardware"
+                app:layout_constraintTop_toTopOf="@id/viewHardware"
+                app:layout_constraintBottom_toBottomOf="@id/viewHardware"
+                app:layout_constraintVertical_bias="0.688"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@android:color/black"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:hintEnabled="false" app:layout_constraintHorizontal_bias="0.488">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tipodiscos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:fontFamily="@font/roboto"
+                    android:background="@android:color/white"
+                    android:textColor="@android:color/black"
+                    android:padding="12dp"
+                    android:hint=""
+                    android:layout_margin="0dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Switch
+                android:text="Wifi"
+                android:layout_width="104dp"
+                android:layout_height="41dp" android:id="@+id/switchWifi"
+                android:textSize="20sp" android:fontFamily="@font/roboto_bold"
+                app:layout_constraintTop_toTopOf="@+id/viewHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewHardware" android:layout_marginTop="736dp"
+                app:layout_constraintHorizontal_bias="0.076" android:textStyle="bold"/>
+        <Switch
+                android:text="Bluetooth"
+                android:layout_width="143dp"
+                android:layout_height="39dp" android:id="@+id/switchBluetooth"
+                android:textSize="20sp" android:fontFamily="@font/roboto_bold"
+                app:layout_constraintTop_toTopOf="@+id/viewHardware"
+                app:layout_constraintStart_toStartOf="@+id/viewHardware"
+                app:layout_constraintEnd_toEndOf="@+id/viewHardware" android:layout_marginTop="736dp"
+                app:layout_constraintHorizontal_bias="0.906" android:textStyle="bold"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

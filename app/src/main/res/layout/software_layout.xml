@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutContenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+        <View
+                android:id="@+id/viewSoftware"
+                android:layout_width="320dp"
+                android:layout_height="140dp"
+                android:background="@drawable/button_lista_equipos"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+
+        <TextView
+                android:id="@+id/textViewSoftware"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SOFTWARE"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="@id/viewSoftware"
+                app:layout_constraintBottom_toBottomOf="@id/viewSoftware"
+                app:layout_constraintVertical_bias="0.088" app:layout_constraintStart_toStartOf="@+id/viewSoftware"
+                app:layout_constraintEnd_toEndOf="@+id/viewSoftware" app:layout_constraintHorizontal_bias="0.07"/>
+        <TextView
+                android:id="@+id/textViewPlaceholderEquipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sistema operativo"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintStart_toStartOf="@id/viewSoftware"
+                app:layout_constraintEnd_toEndOf="@id/viewSoftware"
+                app:layout_constraintHorizontal_bias="0.14"
+                app:layout_constraintBottom_toTopOf="@+id/soInputLayout" android:layout_marginBottom="4dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/soInputLayout"
+
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/viewSoftware"
+                app:layout_constraintEnd_toEndOf="@id/viewSoftware"
+                app:layout_constraintTop_toTopOf="@id/viewSoftware"
+                app:layout_constraintBottom_toBottomOf="@id/viewSoftware"
+                app:layout_constraintVertical_bias="0.808"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@android:color/black"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/so"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:fontFamily="@font/roboto"
+                    android:background="@android:color/white"
+                    android:textColor="@android:color/black"
+                    android:padding="12dp"
+                    android:hint=""
+                    android:layout_margin="0dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

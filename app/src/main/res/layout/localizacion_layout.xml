@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutContenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+        <View
+                android:id="@+id/viewLocalizacion"
+                android:layout_width="320dp"
+                android:layout_height="240dp"
+                android:background="@drawable/containter_localizacion"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+
+        <TextView
+                android:id="@+id/textViewLocalizacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOCALIZACIÓN"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="@id/viewLocalizacion"
+                app:layout_constraintBottom_toBottomOf="@id/viewLocalizacion"
+                app:layout_constraintVertical_bias="0.079"
+                app:layout_constraintStart_toStartOf="@+id/viewLocalizacion"
+                app:layout_constraintEnd_toEndOf="@+id/viewLocalizacion" app:layout_constraintHorizontal_bias="0.084"/>
+        <TextView
+                android:id="@+id/textViewPlaceholderAula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aula"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintStart_toStartOf="@id/viewLocalizacion"
+                app:layout_constraintEnd_toEndOf="@id/viewLocalizacion"
+                app:layout_constraintHorizontal_bias="0.095"
+                app:layout_constraintBottom_toTopOf="@+id/aulaInputLayout" android:layout_marginBottom="4dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/aulaInputLayout"
+
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/viewLocalizacion"
+                app:layout_constraintEnd_toEndOf="@id/viewLocalizacion"
+                app:layout_constraintTop_toTopOf="@id/viewLocalizacion"
+                app:layout_constraintBottom_toBottomOf="@id/viewLocalizacion"
+                app:layout_constraintVertical_bias="0.453"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@android:color/black"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/aula"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:fontFamily="@font/roboto"
+                    android:background="@android:color/white"
+                    android:textColor="@android:color/black"
+                    android:padding="12dp"
+                    android:hint=""
+                    android:layout_margin="0dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+                android:id="@+id/textViewCodigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Código"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintStart_toStartOf="@id/viewLocalizacion"
+                app:layout_constraintEnd_toEndOf="@id/viewLocalizacion"
+                app:layout_constraintHorizontal_bias="0.095"
+                app:layout_constraintBottom_toTopOf="@+id/codigoInputLayout" android:layout_marginBottom="4dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/codigoInputLayout"
+
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/viewLocalizacion"
+                app:layout_constraintEnd_toEndOf="@id/viewLocalizacion"
+                app:layout_constraintTop_toTopOf="@id/viewLocalizacion"
+                app:layout_constraintBottom_toBottomOf="@id/viewLocalizacion"
+                app:layout_constraintVertical_bias="0.917"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@android:color/black"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/codigo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:fontFamily="@font/roboto"
+                    android:background="@android:color/white"
+                    android:textColor="@android:color/black"
+                    android:padding="12dp"
+                    android:hint=""
+                    android:layout_margin="0dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
