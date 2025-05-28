@@ -12,9 +12,9 @@
     <application
             android:allowBackup="true"
             android:fullBackupContent="@xml/backup_rules"
-            android:icon="@mipmap/ic_computer_retro_uno_foreground"
+            android:icon="@mipmap/ic_icono_foreground"
             android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_computer_retro_uno_round"
+            android:roundIcon="@mipmap/ic_icono_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.ProyectoFinal.NoActionBar"
             android:usesCleartextTraffic="true"

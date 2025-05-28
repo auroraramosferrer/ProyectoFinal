@@ -15,7 +15,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.proyectofinal.R
 import com.example.proyectofinal.model.adapter.IncidenciaAdapter
 import com.example.proyectofinal.ui.detallesIncidencias.DetallesIncidenciasFragment
-import com.example.proyectofinal.ui.detallesIncidencias.DetallesIncidenciasSharedViewModel
+import com.example.proyectofinal.ui.detasllesIncidencias.DetallesIncidenciasSharedViewModel
 
 class IncidenciasResueltasFragment : Fragment() {
 

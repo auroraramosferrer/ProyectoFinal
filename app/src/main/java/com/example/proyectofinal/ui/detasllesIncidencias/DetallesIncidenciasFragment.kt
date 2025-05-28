@@ -15,6 +15,7 @@ import com.example.proyectofinal.api.RetrofitClient
 import com.example.proyectofinal.databinding.FragmentDetallesIncidenciasBinding
 import kotlinx.coroutines.launch
 import com.example.proyectofinal.model.EstadoRequest
+import com.example.proyectofinal.ui.detasllesIncidencias.DetallesIncidenciasSharedViewModel
 
 class DetallesIncidenciasFragment : Fragment() {
 

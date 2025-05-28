@@ -12,7 +12,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyectofinal.R
 import com.example.proyectofinal.model.adapter.IncidenciaAdapter
-import com.example.proyectofinal.ui.detallesIncidencias.DetallesIncidenciasSharedViewModel
+import com.example.proyectofinal.ui.detasllesIncidencias.DetallesIncidenciasSharedViewModel
 
 class IncidenciasCreadasFragment : Fragment() {
 
