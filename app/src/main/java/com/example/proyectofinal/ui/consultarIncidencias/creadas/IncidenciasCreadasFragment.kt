@@ -36,11 +36,9 @@ class IncidenciasCreadasFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Crear el adaptador con el lambda para manejar el clic
         adapter = IncidenciaAdapter(emptyList()) { id ->
             Log.d("IncidenciasCreadasFragment", "Clic en incidencia con ID: $id")
 
-            // Establecer el ID en el SharedViewModel
             sharedViewModel.setIncidenciaId(id)
 
             findNavController().navigate(
@@ -55,13 +53,10 @@ class IncidenciasCreadasFragment : Fragment() {
             viewModel.cargarIncidenciasCreadas()
         }
 
-        // (Opcional) Mostrar cargando al iniciar
         swipeRefreshLayout.isRefreshing = true
 
-        // Cargar las incidencias activas
         viewModel.cargarIncidenciasCreadas()
 
-        // Observar los cambios en la lista de incidencias
         viewModel.incidencias.observe(viewLifecycleOwner) { lista ->
             adapter.actualizarLista(lista)
             swipeRefreshLayout.isRefreshing = false

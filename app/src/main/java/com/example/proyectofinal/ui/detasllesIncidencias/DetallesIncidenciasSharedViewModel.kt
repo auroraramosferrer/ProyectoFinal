@@ -1,5 +1,5 @@
-// DetallesIncidenciasSharedViewModel.kt
-package com.example.proyectofinal.ui.detallesIncidencias
+
+package com.example.proyectofinal.ui.detasllesIncidencias
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

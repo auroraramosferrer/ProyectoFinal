@@ -14,7 +14,6 @@ class ConsultarIncidenciasViewModel : ViewModel() {
     private val _incidencias = MutableLiveData<List<Incidencia>>()
     val incidencias: LiveData<List<Incidencia>> get() = _incidencias
 
-    // Cargar incidencias filtradas por estado y orden
     fun cargarIncidenciasFiltradas(estado: String, orden: String) {
         viewModelScope.launch {
             try {

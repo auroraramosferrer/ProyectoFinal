@@ -42,10 +42,10 @@ class LoginActivity : AppCompatActivity() {
                         val prefs = getSharedPreferences("my_prefs", MODE_PRIVATE)
                         prefs.edit()
                             .putString("jwt_token", token)
-                            .putString("nombre_usuario", username) // ← aquí guardamos el nombre de usuario
+                            .putString("nombre_usuario", username)
                             .apply()
 
-                        // Ir a la actividad principal
+
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
                         startActivity(intent)
                         finish()

@@ -35,7 +35,6 @@ class ConsultarIncidenciasFragment : Fragment() {
         tabLayout = view.findViewById(R.id.tabLayout)
         bottomNav = view.findViewById(R.id.bottomNav)
 
-        // Configurar el ViewPager con los tabs
         viewPager.adapter = TabsAdapter(this)
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = when (position) {
@@ -46,7 +45,6 @@ class ConsultarIncidenciasFragment : Fragment() {
             }
         }.attach()
 
-        // Selección de filtro desde el BottomNavigationView
         bottomNav.setOnItemSelectedListener { item ->
             val orden = when (item.itemId) {
                 R.id.menu_option_1 -> "fecha"

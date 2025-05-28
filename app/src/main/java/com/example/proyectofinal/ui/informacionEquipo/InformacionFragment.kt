@@ -404,20 +404,20 @@ class InformacionFragment : Fragment() {
 
         val output = ByteArrayOutputStream()
 
-        // 1) Establecer modelo QR (modelo 2)
+        //  modelo QR
         output.write(byteArrayOf(0x1D, 0x28, 0x6B, 0x04, 0x00, 0x31, 0x41, 0x32, 0x00))
 
-        // 2) Establecer tamaño del módulo (por ejemplo 8)
+        // tamaño del módulo
         output.write(byteArrayOf(0x1D, 0x28, 0x6B, 0x03, 0x00, 0x31, 0x43, 0x08))
 
-        // 3) Establecer nivel de corrección de errores (48 = nivel L)
+        // nivel de corrección de errores
         output.write(byteArrayOf(0x1D, 0x28, 0x6B, 0x03, 0x00, 0x31, 0x45, 0x30))
 
-        // 4) Guardar datos QR
+        // guardo datos QR
         output.write(byteArrayOf(0x1D, 0x28, 0x6B, pL, pH, 0x31, 0x50, 0x30))
         output.write(qrData)
 
-        // 5) Imprimir código QR
+        // imprimo
         output.write(byteArrayOf(0x1D, 0x28, 0x6B, 0x03, 0x00, 0x31, 0x51, 0x30))
 
         return output.toByteArray()

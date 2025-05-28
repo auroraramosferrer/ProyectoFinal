@@ -40,7 +40,7 @@ class RegistrarFragment : Fragment() {
     private var imageBase64: String = ""
     private var selectedImageUri: Uri? = null
 
-    // Contratos para la galería y cámara
+
     private val pickImage = registerForActivityResult(
         ActivityResultContracts.GetContent()
     ) { uri: Uri? ->
@@ -55,7 +55,7 @@ class RegistrarFragment : Fragment() {
         }
     }
 
-    // Contratos para permisos
+
     private val requestGalleryPermission = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
     ) { isGranted -> if (isGranted) openGallery() else showPermissionDeniedToast() }
@@ -102,7 +102,6 @@ class RegistrarFragment : Fragment() {
                 return@setOnClickListener
             }
 
-            // Si el aula existe en la base de datos, sigue con el registro
             comprobarAulaYRegistrar(aulaNombre)
         }
 

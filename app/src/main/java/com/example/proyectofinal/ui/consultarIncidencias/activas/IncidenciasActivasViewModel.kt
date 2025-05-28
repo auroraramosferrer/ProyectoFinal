@@ -14,7 +14,7 @@ class IncidenciasActivasViewModel : ViewModel() {
     private val _incidencias = MutableLiveData<List<Incidencia>>()
     val incidencias: LiveData<List<Incidencia>> get() = _incidencias
 
-    private var ordenActual = "aula"  // Por defecto, igual que en creadas
+    private var ordenActual = "aula"
 
     fun setOrden(orden: String) {
         ordenActual = orden
@@ -24,7 +24,7 @@ class IncidenciasActivasViewModel : ViewModel() {
     fun cargarIncidenciasActivas() {
         viewModelScope.launch {
             try {
-                // Aquí llamamos a la API con ordenActual
+
                 val response = RetrofitClient.apiService.getIncidenciasOrdenadas(
                     listOf("procesada"),
                     ordenActual

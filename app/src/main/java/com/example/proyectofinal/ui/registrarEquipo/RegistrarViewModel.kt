@@ -60,10 +60,10 @@ class RegistrarViewModel : ViewModel() {
                     foto = imageBase64
                 )
 
-                // Versión con manejo de Response
+
                 val response: Response<Equipo> = apiService.crearEquipo(miEquipo)
 
-                if (response.isSuccessful) { // Ahora debería reconocer isSuccessful
+                if (response.isSuccessful) {
                     val equipoCreado = response.body()
                     equipoCreado?.let {
                         _datos.value = listOf(it)

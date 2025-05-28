@@ -39,12 +39,6 @@ class EquipoAdapter(private val equipos: MutableList<Equipo>) :
                 onItemClickListener?.invoke(equipo)
             }
 
-            // También puedes manejar clics individuales si quieres
-            // Pulsar el botón provoca la navegación
-//            binding.imageButtonListaEquipos.setOnClickListener {
-//                onItemClickListener?.invoke(equipo)
-//            }
-
         }
     }
 

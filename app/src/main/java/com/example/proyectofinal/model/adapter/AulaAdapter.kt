@@ -25,10 +25,6 @@ class AulaAdapter(private var aulas: MutableList<Aula>) : RecyclerView.Adapter<A
     override fun onBindViewHolder(holder: AulaViewHolder, position: Int) {
         val aula = aulas[position]
         holder.bind(aula)
-        // Ya no usamos itemView.setOnClickListener aquí
-//        holder.setOnButtonClickListener {
-//            onItemClickListener?.invoke(aula)
-//        }
 
         holder.itemView.setOnClickListener {
             onItemClickListener?.invoke(aula)
@@ -45,15 +41,12 @@ class AulaAdapter(private var aulas: MutableList<Aula>) : RecyclerView.Adapter<A
 
     class AulaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val nombreTextView: TextView = itemView.findViewById(R.id.textViewNombreAula)
-//        private val boton: View = itemView.findViewById(R.id.imageButtonListaAulas)
+
 
         fun bind(aula: Aula) {
             nombreTextView.text = "AULA ${aula.nombre}"
         }
 
-//        fun setOnButtonClickListener(listener: () -> Unit) {
-//            boton.setOnClickListener { listener() }
-//        }
     }
 }
 

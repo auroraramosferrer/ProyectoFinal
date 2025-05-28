@@ -59,7 +59,6 @@ class IncidenciasActivasFragment : Fragment() {
             swipeRefreshLayout.isRefreshing = false
         }
 
-        // Añadir botones y listeners para ordenar
         val fabAula = view.findViewById<View>(R.id.btnAulaActivas)
         val fabFecha = view.findViewById<View>(R.id.btnFechaActivas)
         val fabPrioridad = view.findViewById<View>(R.id.btnPrioridadActivas)

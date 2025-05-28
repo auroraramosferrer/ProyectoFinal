@@ -33,16 +33,13 @@ class ListaEquiposAulasFragment : Fragment() {
         recyclerView = binding.recyclerAulas
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        // Inicializa el adaptador con lista vacía y así evitas el "No adapter attached"
         aulaAdapter = AulaAdapter(mutableListOf())
         recyclerView.adapter = aulaAdapter
 
-        // Configurar SwipeRefresh
         binding.swipeRefresh.setOnRefreshListener {
             fetchAulas()
         }
 
-        // Cargar datos al inicio
         fetchAulas()
 
         return binding.root
@@ -50,7 +47,7 @@ class ListaEquiposAulasFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        fetchAulas()  // Recarga al volver a este fragmento
+        fetchAulas()
     }
 
     private fun fetchAulas() {
@@ -60,11 +57,9 @@ class ListaEquiposAulasFragment : Fragment() {
                 val aulasResponse = RetrofitClient.apiService.getAulas()
                 Log.d("ListaEquiposAulas", "Número de aulas recibidas: ${aulasResponse.size}")
 
-                // Actualiza la lista del adaptador sin crear uno nuevo
                 aulaAdapter.updateAulas(aulasResponse)
 
 
-                // Establecer el listener (solo la primera vez o puedes moverlo a onCreateView)
                 aulaAdapter.setOnItemClickListener { aula ->
                     val bundle = Bundle().apply {
                         aula.id?.let { putLong("id", it) }

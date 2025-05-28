@@ -72,7 +72,6 @@ class IncidenciasResueltasFragment : Fragment() {
             }
         }
 
-        // Añadimos botones y sus listeners para ordenar
         val fabAula = view.findViewById<View>(R.id.btnAulaResueltas)
         val fabFecha = view.findViewById<View>(R.id.btnFechaResueltas)
         val fabPrioridad = view.findViewById<View>(R.id.btnPrioridadResueltas)

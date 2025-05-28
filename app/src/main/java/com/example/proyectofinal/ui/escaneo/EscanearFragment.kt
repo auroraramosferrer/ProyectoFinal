@@ -40,7 +40,7 @@ class EscanearFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val inputEscaneo = view.findViewById<TextInputEditText>(R.id.escaneo)
 
-        inputEscaneo.requestFocus() // para que el escáner escriba ahí
+        inputEscaneo.requestFocus()
 
         inputEscaneo.setOnEditorActionListener { _, actionId, event ->
             val isEnter = actionId == EditorInfo.IME_ACTION_DONE ||
@@ -71,7 +71,6 @@ class EscanearFragment : Fragment() {
                 val bundle = Bundle().apply {
                     equipo.id?.let { putLong("id", it) }
 
-                    // Añade más campos si los necesitas
                 }
                 findNavController().navigate(R.id.action_escaneo_to_informacion, bundle)
             } catch (e: Exception) {

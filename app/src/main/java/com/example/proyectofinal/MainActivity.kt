@@ -32,15 +32,14 @@ class MainActivity : AppCompatActivity() {
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
-        // Accedemos al header del NavigationView
+
         val headerView = navView.getHeaderView(0)
         val tvNombreUsuario = headerView.findViewById<TextView>(R.id.tvNombreUsuario)
 
-// Leemos el nombre del usuario desde SharedPreferences
+
         val prefs = getSharedPreferences("my_prefs", MODE_PRIVATE)
         val nombreUsuario = prefs.getString("nombre_usuario", "Invitado")
 
-// Lo mostramos en el TextView del header
         tvNombreUsuario.text = nombreUsuario?.uppercase() ?: ""
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)
@@ -88,7 +87,7 @@ class MainActivity : AppCompatActivity() {
                         " y pulse el botón para añadirla."
             )
             .setPositiveButton("ENTENDIDO") { dialog, _ ->
-                dialog.dismiss() // Cierra el diálogo cuando se presiona el botón "Cerrar"
+                dialog.dismiss()
             }
             .show()
     }
@@ -115,11 +114,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun cerrarSesion() {
-        // Limpia SharedPreferences (por ejemplo, las credenciales guardadas)
+
         val prefs = getSharedPreferences("my_prefs", MODE_PRIVATE)
         prefs.edit().clear().apply()
 
-        // Navega a la actividad de Login y cierra MainActivity
         val intent = Intent(this, LoginActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)

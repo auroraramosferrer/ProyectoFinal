@@ -67,14 +67,14 @@ class CrearIncidenciasFragment : Fragment() {
             R.id.btnBaja -> "1"
             R.id.btnMedia -> "2"
             R.id.btnAlta -> "3"
-            else -> ""  // En caso de que no se haya seleccionado ningún botón
+            else -> ""
         }
 
         val estado = when (binding.includeEstado.toggleGroupEstado.checkedButtonId) {
             R.id.btnCreada -> "creada"
             R.id.btnProceso -> "procesada"
             R.id.btnResuelta -> "resuelta"
-            else -> ""  // En caso de que no se haya seleccionado ningún botón
+            else -> ""
         }
 
         val autor = binding.includeAutor.autorInputLayout.editText?.text.toString().trim()
