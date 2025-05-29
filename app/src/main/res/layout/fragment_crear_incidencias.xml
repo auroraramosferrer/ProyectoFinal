@@ -41,14 +41,15 @@
                     android:layout_height="wrap_content"
 
                     />
-            <include
-                    android:id="@+id/include_autor"
-                    layout="@layout/autor_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+
             <include
                     android:id="@+id/include_estado"
                     layout="@layout/estado_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            <include
+                    android:id="@+id/include_autor"
+                    layout="@layout/autor_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             <include

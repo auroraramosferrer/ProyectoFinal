@@ -57,7 +57,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_lista_equipos_aulas,
                 R.id.nav_lista_equipos_equipo,
                 R.id.nav_informacion_equipo,
-                R.id.nav_detalles_incidencia
+                R.id.nav_detalles_incidencia,
+                R.id.nav_editar_equipo,
+                R.id.nav_editar_incidencia,
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

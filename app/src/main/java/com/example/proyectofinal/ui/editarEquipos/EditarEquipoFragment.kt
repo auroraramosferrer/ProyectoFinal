@@ -114,6 +114,9 @@ class EditarEquipoFragment : Fragment() {
         binding.includeImagen.imageButtonCamara.setOnClickListener {
             checkCameraPermission()
         }
+        binding.floatingActionButtonLeft.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     private fun actualizarEquipo() {
